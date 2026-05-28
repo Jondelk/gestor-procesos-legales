@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:4000/api/procesos";
+const API = `${import.meta.env.VITE_API_URL}/procesos`;
 
 const getConfig = () => {
   const token = localStorage.getItem("token");

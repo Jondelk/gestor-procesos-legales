@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:4000/api/calculo";
+const API = `${import.meta.env.VITE_API_URL}/calculo`;
 
 const getConfig = () => {
   const token = localStorage.getItem("token");

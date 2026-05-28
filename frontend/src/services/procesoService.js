@@ -4,6 +4,7 @@ const API = `${import.meta.env.VITE_API_URL}/procesos`;
 
 const getConfig = () => {
   const token = localStorage.getItem("token");
+
   return {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -31,7 +32,6 @@ export const deleteProceso = async (id) => {
   return res.data;
 };
 
-// ✅ NUEVO
 export const getProcesosPendientes = async () => {
   const res = await axios.get(`${API}/pendientes`, getConfig());
   return res.data;

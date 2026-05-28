@@ -4,6 +4,7 @@ const API = `${import.meta.env.VITE_API_URL}/calculo`;
 
 const getConfig = () => {
   const token = localStorage.getItem("token");
+
   return {
     headers: {
       Authorization: `Bearer ${token}`,
